@@ -1,0 +1,116 @@
+/* inside the root apply whole web page */
+:root{
+    --green: green;
+    --black: rgb(31, 23, 23);
+    --light-color: #666;
+    --box-shadow: 5px 5px 5px rgba(0,0,0.1);
+    --border: 2rem solid rgba(0,0,0.1);
+    --outline: .1rem solid rgba(0,0,0.1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none; 
+    /* use for remove underline */
+    text-transform: capitalize;
+    /* used for capitalized first letter */
+
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top:7rem ;
+}
+body{
+    background-color: rgb(204, 201, 201);
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+.logo{
+    font-size: 2.5rem;
+    font-weight: bolder;    
+}
+.logo i{
+    color: var(--green);
+}
+.navbar a{
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+.navbar a:hover{
+    color: var(--green);
+}
+
+.icons div{
+  border-radius: 0px solid;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  border-radius: .5rem;
+  background: rgb(216, 215, 215);
+  color: var(--black);
+  font-size: 2rem;
+  margin-right: .3rem;
+  text-align: center;
+  cursor: pointer;
+  /* cursor used for add hand type */
+}
+.icons div:hover{
+    background-color: var(--green);
+    color: white;
+}
+#menu-btn{
+    display: none;
+}
+.search-form{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 50rem;
+    height: 4.5rem;
+    background: white;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+.search-form.active{
+  right: 2rem;
+  transition: .4s linear;
+}
+.search-form input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 0 1.5rem;
+}
+.search-form  label{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+    cursor: pointer; 
+}
+.search-form  label:hover{
+    color: var(--green);
+}
